@@ -16,14 +16,16 @@ strong {
 }
 
 @layer base {
-  ::selection {
-    background-color: #0c0a0923;
+  :root {
+    --selection-background: #0c0a0923;
   }
 
   .dark {
-    ::selection {
-      background-color: #ffffff55;
-    }
+    --selection-background: #ffffff55;
+  }
+
+  ::selection {
+    background-color: var(--selection-background);
   }
 }
 

@@ -1,4 +1,4 @@
-import { Award, GraduationCap, Mail } from 'lucide-react'
+import { Award, Globe, GraduationCap, Mail } from 'lucide-react'
 import { FaLinkedin } from 'react-icons/fa'
 import { Contact } from './Contact'
 import { Projects } from './Projects'
@@ -26,17 +26,27 @@ const PROJECTS = [
     link: `https://www.freecodecamp.org/certification/Manatoa/front-end-development-libraries`,
   },
   {
+    Icon: Globe,
+    title: `Création site web pour particulier`,
+    description: `React JS, Tailwind CSS`,
+  },
+  {
+    Icon: Globe,
+    title: `Création site web pour particulier`,
+    description: `HTML, CSS, WordPress`,
+  },
+  /*{
     Icon: Award,
     title: `Backend Development and APIs Certification`,
     description: `FreeCodeCamp`,
     link: `https://www.freecodecamp.org/certification/Manatoa/back-end-development-and-apis`,
-  },
-  {
+  },*/
+  /*{
     Icon: Award,
     title: `Quality Assurance Certification`,
     description: `FreeCodeCamp`,
     link: `https://www.freecodecamp.org/certification/Manatoa/quality-assurance-v7`,
-  },
+  },*/
 ]
 
 const TRAININGS = [

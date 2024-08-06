@@ -11,12 +11,8 @@ export type ProjectsProps = {
 }
 
 export const Projects = (props: ProjectsProps) => {
-  return (
-    <Link
-      href={props.link || ''}
-      target={props.link ? '_blank' : ''}
-      className='flex cursor-pointer items-start gap-2 rounded p-1 hover:bg-muted/30'
-    >
+  const content = (
+    <>
       <span className='rounded-lg bg-accent p-3 text-primary'>
         <props.Icon size={30} />
       </span>
@@ -25,6 +21,19 @@ export const Projects = (props: ProjectsProps) => {
         <p className='text-sm text-muted-foreground'>{props.description}</p>
       </div>
       {props.badge && <Badge variant={'outline'}>{props.badge}</Badge>}
+    </>
+  )
+  return props.link ? (
+    <Link
+      href={props.link}
+      target={'_blank'}
+      className='flex cursor-pointer items-start gap-2 rounded p-1 hover:bg-muted/30'
+    >
+      {content}
     </Link>
+  ) : (
+    <div className='flex cursor-pointer items-start gap-2 rounded p-1 hover:bg-muted/30'>
+      {content}
+    </div>
   )
 }

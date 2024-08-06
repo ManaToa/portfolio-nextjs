@@ -25,6 +25,7 @@ export const Header = () => {
             Mon CV
           </Link>
           <ModeToggle />
+          {/*<LanguageSwitcher />*/}
         </ul>
       </Section>
     </header>
