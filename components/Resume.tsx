@@ -1,4 +1,4 @@
-import { Award, Globe, GraduationCap, Mail } from 'lucide-react'
+import { Award, Code, GraduationCap, Mail } from 'lucide-react'
 import { FaLinkedin } from 'react-icons/fa'
 import { Contact } from './Contact'
 import { Projects } from './Projects'
@@ -7,11 +7,17 @@ import { Training } from './Trainings'
 import { Card } from './ui/card'
 
 const PROJECTS = [
-  {
+  /*{
     Icon: Award,
     title: `Responsive Web Design Certification`,
     description: `FreeCodeCamp`,
     link: 'https://www.freecodecamp.org/certification/Manatoa/responsive-web-design',
+  },*/
+  {
+    Icon: Code,
+    title: `Développement site web`,
+    description: `Next JS, TypeScript, Tailwind CSS`,
+    badge: 'Mission',
   },
   {
     Icon: Award,
@@ -26,14 +32,16 @@ const PROJECTS = [
     link: `https://www.freecodecamp.org/certification/Manatoa/front-end-development-libraries`,
   },
   {
-    Icon: Globe,
-    title: `Création site web pour particulier`,
+    Icon: Code,
+    title: `Développement site web`,
     description: `React JS, Tailwind CSS`,
+    badge: 'Mission',
   },
   {
-    Icon: Globe,
-    title: `Création site web pour particulier`,
-    description: `HTML, CSS, WordPress`,
+    Icon: Code,
+    title: `Développement site web`,
+    description: `HTML, CSS`,
+    badge: 'Mission',
   },
   /*{
     Icon: Award,
@@ -85,9 +93,9 @@ const CONTACT_DATA = [
 
 export const Resume = () => {
   return (
-    <Section className='flex items-start gap-4 *:w-full max-md:flex-col'>
-      <Card className='flex flex-1 flex-col gap-2 p-4 text-left'>
-        <p>Mes projets</p>
+    <Section className='flex items-center gap-4 *:h-full max-md:flex-col md:items-start lg:h-[26rem]'>
+      <Card className='flex h-full flex-1 flex-col gap-2 p-4 text-left'>
+        <p>Mes projets récents</p>
         {PROJECTS.map((project, i) => (
           <Projects key={i} {...project} />
         ))}

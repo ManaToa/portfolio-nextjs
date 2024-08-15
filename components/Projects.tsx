@@ -14,7 +14,7 @@ export const Projects = (props: ProjectsProps) => {
   const content = (
     <>
       <span className='rounded-lg bg-accent p-3 text-primary'>
-        <props.Icon size={30} />
+        <props.Icon size={25} />
       </span>
       <div className='flex-1'>
         <p className='font-medium leading-7 [&:not(:first-child)]:mt-6'>{props.title}</p>

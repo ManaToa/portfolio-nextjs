@@ -8,7 +8,7 @@ export const Hero = () => {
     <Section className='flex items-start gap-6 py-20 max-md:flex-col'>
       <div className='flex-[1.5]'>
         <div className='text-4xl lg:text-6xl'>
-          <p className='font-bold'>Bonjour 👋</p>
+          <p className='font-bold'>Bonjour ! 👋</p>
           <h2>
             <span className='font-bold'>Kenania</span> Dauphin
           </h2>
@@ -16,16 +16,20 @@ export const Hero = () => {
             Développeur <span className='font-bold'>Web Frontend</span>
           </h3>
         </div>
-        <p className='py-6 text-justify font-caption text-xl italic md:text-left'>
+        <p className='pt-6 text-justify font-caption text-xl italic md:text-left'>
           {`Passionné de développement web, diplômé en Systèmes d'Information de l'Université de Genève,
-          je suis toujours à la recherche de nouvelles technologies à explorer. En ce moment c'est Next JS.
-          Pour moi, chaque ligne de code est une opportunité de créer quelque chose d'unique et d'impactant.`}
+          je suis toujours à la recherche de nouvelles technologies à explorer. En ce moment c'est Next JS.`}
         </p>
+        <p className='pb-6 pt-2 text-justify font-caption text-xl italic md:text-left'>{`Pour moi, chaque ligne de code est une opportunité de créer quelque chose d'unique et d'impactant.`}</p>
         <div className='flex justify-center gap-1 py-3 md:justify-normal'>
-          <Link href={'https://github.com/ManaToa'} target='_blank'>
+          <Link href={'https://github.com/ManaToa'} target='_blank' title={`Mon profil GitHub`}>
             <IoLogoGithub size={40} />
           </Link>
-          <Link href={'https://www.linkedin.com/in/kenaniadauphin/'} target='_blank'>
+          <Link
+            href={'https://www.linkedin.com/in/kenaniadauphin/'}
+            target='_blank'
+            title={`Mon profil LinkedIn`}
+          >
             <IoLogoLinkedin size={40} />
           </Link>
         </div>
