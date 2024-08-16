@@ -8,22 +8,49 @@ import './globals.css'
 const OpenSans = Open_Sans({ subsets: ['latin'], variable: '--font-caption' })
 
 export const metadata: Metadata = {
-  title: 'Kenania Dauphin • Développeur Frontend',
-  description: 'Description à créer',
+  title: 'Kenania Dauphin • Développeur Web Frontend',
+  description:
+    'Portfolio de Kenania Dauphin, développeur web frontend. Découvrez mon CV, mon parcours et mes différents projets.',
+  robots: {
+    index: true,
+    follow: true,
+  },
+  icons: {
+    icon: '/icons/icon.png',
+    shortcut: '/icons/icon.png',
+    apple: '/icons/apple-touch-icon.png',
+    other: {
+      rel: 'apple-touch-icon-precomposed',
+      url: '/icons/icon.png',
+    },
+  },
+  manifest: '/site.webmanifest',
+  creator: 'Kenania Dauphin',
+  authors: [{ name: 'Kenania' }],
+  metadataBase: new URL('https://manatoa.dev'),
+  alternates: {
+    canonical: '/',
+  },
+  keywords: [
+    'développeur web',
+    'développeur frontend',
+    'portfolio développeur',
+    'développeur informatique',
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'TypeScript',
+    'ReactJS',
+    'NextJS',
+    'TailwindCSS',
+    'NodeJS',
+    'SQL',
+    'projets web',
+    'expérience professionnelle',
+    'curriculum vitae',
+    'compétences techniques',
+  ],
 }
-
-/*
-FAVICONS 
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0c0a09">
-<meta name="msapplication-TileColor" content="#0c0a09">
-<meta name="theme-color" content="#0c0a09">
-
-*/
 
 export default function RootLayout({
   children,
