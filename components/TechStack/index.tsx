@@ -1,16 +1,9 @@
-import { SiJavascript, SiNextdotjs, SiReact, SiTailwindcss, SiTypescript } from 'react-icons/si'
-import { Section } from './Section'
-import { SquareIcon } from './Square-Icon'
+import { Section } from '../Section'
+import { SquareIcon } from './SquareIcon'
 
-const techs = [
-  { name: `JavaScript`, Icon: SiJavascript, bgColor: 'bg-black', textColor: 'text-[#F0DB4F]' },
-  { name: `TypeScript`, Icon: SiTypescript, bgColor: 'bg-white', textColor: 'text-[#007ACC]' },
-  { name: `React JS`, Icon: SiReact, textColor: 'text-[#61DBFB]' },
-  { name: `Next JS`, Icon: SiNextdotjs, textColor: 'text-black' },
-  { name: `Tailwind CSS`, Icon: SiTailwindcss, textColor: 'text-[#06B6D4]' },
-]
+import { TECHS } from './data'
 
-export const Skills = () => {
+export const TechStack = () => {
   return (
     <Section className='py-20'>
       <div>
@@ -22,13 +15,17 @@ export const Skills = () => {
         </h2>
       </div>
       <div className='relative flex flex-wrap justify-center gap-3 py-20 *:size-[10rem] *:rounded-sm *:transition-all *:duration-200 hover:*:-mt-3'>
-        {techs.map((tech, index) => (
+        {TECHS.map((tech, index) => (
           <div
             key={index}
             className='*: group *:rounded-sm *:transition-all *:duration-200 hover:*:-mt-3'
           >
             <SquareIcon bgColor={tech.bgColor} className='size-[10rem]'>
-              <tech.Icon className={`rounded-md ${tech.textColor}`} />
+              <tech.Icon
+                className={`rounded-md ${tech.textColor}`}
+                role='img'
+                aria-label={tech.name}
+              />
             </SquareIcon>
             <p className='mt-3 flex h-0 justify-center text-lg text-muted-foreground/70 opacity-0 group-hover:opacity-100'>
               {tech.name}
