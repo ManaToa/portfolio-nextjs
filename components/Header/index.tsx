@@ -4,7 +4,12 @@ import { Section } from '../Section'
 import { ThemeSwitcher } from '../ThemeSwitcher'
 import { buttonVariants } from '../ui/button'
 
-export const Header = () => {
+/**
+ * Composant Header
+ * @returns {JSX.Element} Affiche le titre, deux liens (contact et CV), et un bouton pour changer le thème
+ */
+
+export const Header = (): JSX.Element => {
   return (
     <header className='top-0 z-20 py-4 backdrop-blur-3xl md:sticky'>
       <Section className='flex items-baseline'>

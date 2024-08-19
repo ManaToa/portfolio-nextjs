@@ -11,7 +11,12 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 
-export function ThemeSwitcher() {
+/**
+ * Composant ThemeSwitcher
+ * @returns {JSX.Element} Un bouton pour choisir le thème
+ */
+
+export function ThemeSwitcher(): JSX.Element {
   const { setTheme } = useTheme()
 
   return (

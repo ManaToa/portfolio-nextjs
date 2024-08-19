@@ -3,7 +3,13 @@ import { SquareIcon } from './SquareIcon'
 
 import { TECHS } from './data'
 
-export const TechStack = () => {
+/**
+ * Composant TechStack
+ *
+ * @returns {JSX.Element} Liste des technologies utilisées
+ */
+
+export const TechStack = (): JSX.Element => {
   return (
     <Section className='py-20'>
       <div>

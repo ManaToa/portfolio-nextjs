@@ -3,7 +3,12 @@ import Link from 'next/link'
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io'
 import { Section } from '../Section'
 
-export const Hero = () => {
+/**
+ * Composant Hero
+ * @returns {JSX.Element} Affiche le titre de bienvenue, l’introduction, ma photo de profil, et deux liens (LinkedIn et GitHub)
+ */
+
+export const Hero = (): JSX.Element => {
   return (
     <Section className='flex items-start gap-6 py-20 max-md:flex-col'>
       <div className='flex-[1.5]'>
