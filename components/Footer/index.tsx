@@ -12,7 +12,7 @@ export const Footer = (): JSX.Element => {
       <Section className='flex h-20 items-center justify-center gap-1'>
         <p className='font-light'>Créé par Kenania Dauphin </p>
         <Link
-          href='https://github.com/ManaToa'
+          href='https://github.com/ManaToa/portfolio-nextjs/tree/prod'
           target='_blank'
           title='Consulter le code source de mon portfolio sur GitHub'
           className='font-bold'
