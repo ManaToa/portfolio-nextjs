@@ -6,7 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "fetch": "git fetch --all && git reset --hard origin/prod && git pull",
+    "install": "pnpm install",
+    "reset": "pm2 start pnpm --name portfolio -- start && pm2 save",
+    "restart": "pm2 restart portfolio",
+    "update": "pnpm run fetch && pnpm build",
+    "deploy:restart": "pnpm run update && pnpm run restart",
+    "deploy:reset": "pnpm run update && pnpm run reset"
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.0.6",
