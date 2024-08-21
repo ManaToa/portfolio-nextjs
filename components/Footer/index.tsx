@@ -9,7 +9,7 @@ import { Section } from '../Section'
 export const Footer = (): JSX.Element => {
   return (
     <footer className='mt-20'>
-      <Section className='flex h-20 items-center justify-center gap-1'>
+      <Section className='flex h-20 items-center justify-center gap-1 max-md:flex-col'>
         <p className='font-light'>Créé par Kenania Dauphin </p>
         <Link
           href='https://github.com/ManaToa/portfolio-nextjs/tree/prod'
@@ -17,7 +17,7 @@ export const Footer = (): JSX.Element => {
           title='Consulter le code source de mon portfolio sur GitHub'
           className='font-bold'
         >
-          • Voir sur Github
+          <span className='max-md:hidden'>•</span> Voir sur Github
         </Link>
       </Section>
     </footer>

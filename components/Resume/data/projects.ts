@@ -12,7 +12,7 @@ export const PROJECTS: ProjectItemType[] = [
   {
     Icon: Code,
     title: `Développement site web`,
-    description: `Next JS, TypeScript, Tailwind CSS`,
+    description: `NextJS, TypeScript, TailwindCSS`,
     badge: 'Mission',
   },
   {
@@ -30,7 +30,7 @@ export const PROJECTS: ProjectItemType[] = [
   {
     Icon: Code,
     title: `Développement site web`,
-    description: `React JS, Tailwind CSS`,
+    description: `ReactJS, TailwindCSS`,
     badge: 'Mission',
   },
   {

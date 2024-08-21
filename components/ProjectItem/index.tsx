@@ -29,7 +29,11 @@ export const ProjectItem = ({
         <p className='font-medium leading-7 [&:not(:first-child)]:mt-6'>{title}</p>
         <p className='text-sm text-muted-foreground'>{description}</p>
       </div>
-      {badge && <Badge variant={'outline'}>{badge}</Badge>}
+      {badge && (
+        <Badge className='max-sm:hidden' variant={'outline'}>
+          {badge}
+        </Badge>
+      )}
     </>
   )
   return link ? (

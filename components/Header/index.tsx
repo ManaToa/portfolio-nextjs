@@ -15,7 +15,7 @@ export const Header = (): JSX.Element => {
       <Section className='flex items-baseline'>
         <h1 className='text-lg font-bold text-primary'>Kenania Dauphin</h1>
         <div className='flex-1' />
-        <ul className='flex items-center gap-2'>
+        <ul className='flex items-center gap-2 max-sm:flex-col max-sm:items-end'>
           <Link
             href='mailto:kenania@manatoa.dev'
             className={cn(buttonVariants({ variant: 'link' }), 'h-6 w-auto px-2')}
