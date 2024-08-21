@@ -1,7 +1,6 @@
 import { LucideIcon } from 'lucide-react'
 import Link from 'next/link'
 import { ProjectItemType } from '../Resume/data/projects'
-import { Badge } from '../ui/badge'
 
 /**
  * Composant ProjectItem
@@ -25,11 +24,12 @@ export const ProjectItem = ({
       <span className='rounded-lg bg-accent p-3 text-primary'>
         <Icon size={25} role='img' />
       </span>
-      <div className='flex-1'>
-        <p className='font-medium leading-7 [&:not(:first-child)]:mt-6'>{title}</p>
-        <p className='text-sm text-muted-foreground'>{description}</p>
+      <div>
+        <div className='flex-1'>
+          <p className='font-medium leading-7 [&:not(:first-child)]:mt-6'>{title}</p>
+          <p className='text-sm text-muted-foreground'>{description}</p>
+        </div>
       </div>
-      {badge && <Badge variant={'outline'}>{badge}</Badge>}
     </>
   )
   return link ? (
