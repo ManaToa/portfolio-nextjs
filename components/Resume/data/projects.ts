@@ -11,6 +11,13 @@ export type ProjectItemType = {
 export const PROJECTS: ProjectItemType[] = [
   {
     Icon: Code,
+    title: `Éveil des Possibles | Cours particuliers`,
+    description: `Création d'un site avec NextJS, TypeScript, TailwindCSS, Prisma, PostgreSQL`,
+    badge: 'Mission',
+    link: `https://eveildespossibles.ch`,
+  },
+  {
+    Icon: Code,
     title: `Développement site web`,
     description: `NextJS, TypeScript, TailwindCSS`,
     badge: 'Mission',
@@ -31,12 +38,6 @@ export const PROJECTS: ProjectItemType[] = [
     Icon: Code,
     title: `Développement site web`,
     description: `ReactJS, TailwindCSS`,
-    badge: 'Mission',
-  },
-  {
-    Icon: Code,
-    title: `Développement site web`,
-    description: `HTML, CSS`,
     badge: 'Mission',
   },
 ]
