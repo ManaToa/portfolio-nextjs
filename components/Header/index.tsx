@@ -23,7 +23,7 @@ export const Header = (): JSX.Element => {
             Me contacter
           </Link>
           <Link
-            href='/downloads/CV_Kenania-Dauphin-web.pdf'
+            href='/downloads/Kenania-Dauphin-CV-Developpeur-Fullstack-2025-Web.pdf'
             target='_blank'
             className={cn(buttonVariants({ variant: 'default' }), 'h-6 w-auto px-2')}
           >
