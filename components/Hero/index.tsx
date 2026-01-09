@@ -13,7 +13,7 @@ export const Hero = (): JSX.Element => {
     <Section className='flex items-start gap-6 py-20 max-md:flex-col'>
       <div className='flex-[1.5]'>
         <div className='text-4xl lg:text-6xl'>
-          <p className='font-bold'>Bonjour !! 👋</p>
+          <p className='font-bold'>Bonjour !!! 👋</p>
           <h2>
             <span className='font-bold'>Kenania</span> Dauphin
           </h2>
