@@ -12,8 +12,8 @@ export type ContactLinkType = {
 export const CONTACT_DATA: ContactLinkType[] = [
   {
     Icon: Mail,
-    link: 'mailto:kenania@manatoa.dev',
-    text: 'kenania@manatoa.dev',
+    link: 'mailto:kenaniadauphin@gmail.com',
+    text: 'kenaniadauphin@gmail.com',
     title: 'Envoyer un email à Kenania Dauphin',
   },
   {

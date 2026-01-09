@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3000",
     "lint": "next lint",
     "fetch": "git fetch origin prod && git reset --hard origin/prod && git pull",
     "install-all": "pnpm install",
@@ -24,7 +24,7 @@
     "clsx": "^2.1.1",
     "geist": "^1.3.1",
     "lucide-react": "^0.383.0",
-    "next": "14.2.3",
+    "next": "^14.2.35",
     "next-themes": "^0.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

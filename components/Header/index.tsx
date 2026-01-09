@@ -17,7 +17,7 @@ export const Header = (): JSX.Element => {
         <div className='flex-1' />
         <ul className='flex items-center gap-2 max-sm:flex-col max-sm:items-end'>
           <Link
-            href='mailto:kenania@manatoa.dev'
+            href='mailto:kenaniadauphin@gmail.com'
             className={cn(buttonVariants({ variant: 'link' }), 'h-6 w-auto px-2')}
           >
             Me contacter
