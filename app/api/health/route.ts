@@ -23,7 +23,7 @@ export async function GET() {
 
   return NextResponse.json(
     {
-      status: 'ko',
+      status: 'ok',
       timestamp: new Date().toISOString(),
       maintenance: isMaintenanceMode,
     },
