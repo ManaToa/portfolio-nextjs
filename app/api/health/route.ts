@@ -23,9 +23,9 @@ export async function GET() {
 
   return NextResponse.json(
     {
-      status: 'ok',
+      status: 'ko',
       timestamp: new Date().toISOString(),
-      maintenance: true,
+      maintenance: isMaintenanceMode,
     },
     { status: 200 },
   )
