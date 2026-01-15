@@ -25,7 +25,7 @@ export async function GET() {
     {
       status: 'ok',
       timestamp: new Date().toISOString(),
-      maintenance: isMaintenanceMode,
+      maintenance: true,
     },
     { status: 200 },
   )
