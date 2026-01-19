@@ -45,7 +45,7 @@ export const Hero = (): JSX.Element => {
       </div>
       <div className='mx-auto flex-1 md:mx-0'>
         <Image
-          src={'/img/my-face.jpg'}
+          src={'/img/my-face.jpeg'}
           alt='Photo de Kenania Dauphin'
           width={500}
           height={500}
