@@ -15,7 +15,7 @@ export const Hero = (): JSX.Element => {
         <div className='text-4xl lg:text-6xl'>
           <p className='font-bold'>Bonjour ! 👋</p>
           <h2>
-            <span className='font-bold'>Kenaniaaa</span> Dauphin
+            <span className='font-bold'>Kenania</span> Dauphin
           </h2>
           <h3>
             Développeur <span className='font-bold'>Web Frontend</span>
