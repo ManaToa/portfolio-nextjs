@@ -14,7 +14,8 @@
     "update": "pnpm run fetch && pnpm build",
     "deploy:restart": "pnpm run update && pnpm run restart",
     "deploy:reset": "pnpm run update && pnpm run reset",
-    "merge": "git checkout prod && git merge dev && git push origin prod && git checkout dev"
+    "merge": "git checkout prod && git merge dev && git push origin prod && git checkout dev",
+    "deploy:fast": "bash scripts/deploy-fast.sh"
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.4",
