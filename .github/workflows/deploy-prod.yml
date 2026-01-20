@@ -2,10 +2,11 @@ name: Deploy to VPS (prod)
 
 on:
   push:
-    branches: ['prod']
+    branches:
+      - prod
 
 concurrency:
-  group: deploy-prod
+  group: deploy-prod-${{ github.repository }}
   cancel-in-progress: true
 
 jobs:
@@ -14,7 +15,25 @@ jobs:
     timeout-minutes: 20
 
     steps:
+      - name: Check required secrets
+        id: check
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_USER: ${{ secrets.VPS_USER }}
+          SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
+          APP_NAME: ${{ secrets.APP_NAME }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "${VPS_HOST:-}" ] || [ -z "${VPS_USER:-}" ] || [ -z "${SSH_KEY:-}" ] || [ -z "${APP_NAME:-}" ]; then
+            echo "Required secrets are missing. Skipping deploy."
+            echo "should_deploy=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "should_deploy=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Run remote deploy script
+        if: ${{ steps.check.outputs.should_deploy == 'true' }}
         env:
           VPS_HOST: ${{ secrets.VPS_HOST }}
           VPS_USER: ${{ secrets.VPS_USER }}
@@ -33,4 +52,6 @@ jobs:
 
           ssh-keyscan -p "$PORT" -H "$VPS_HOST" >> ~/.ssh/known_hosts
 
-          ssh -p "$PORT" -i ~/.ssh/id_ed25519 -o BatchMode=yes -o StrictHostKeyChecking=yes             "${VPS_USER}@${VPS_HOST}"             "sudo -n /usr/local/bin/nextapp-deploy.sh '${APP_NAME}'"
+          ssh -p "$PORT" -i ~/.ssh/id_ed25519 -o BatchMode=yes -o StrictHostKeyChecking=yes \
+            "${VPS_USER}@${VPS_HOST}" \
+            "sudo -n /usr/local/bin/nextapp-deploy.sh '${APP_NAME}'"
